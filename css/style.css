@@ -207,7 +207,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("C:/GitHub Repository/Portfolio/Media/wp5278609-retrowave-cave-wallpapers.jpg") top center;
+  background: url(../Media/120894_original_6000x4000.jpg) top center;
   background-size: cover;
 }
 
