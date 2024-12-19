@@ -28,7 +28,7 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
     "Virtual ML based orchestra that uses computer vision to detect human body posture and create music in real time. Using only your web browser and webcam, Symphonic AI enables you to direct a virtual orchestra. It maps out your movements through your webcam using Pose Net, a machine learning library that works in the browser.",
     stack: [{ name: "Vanilla.js"}, {name: "Posenet"}, {name: "Tensorflow.js"}, {name: "Tone.js"}],
     image: "/assets/work/symphonic-ai.gif",
-    live: "",
+    live: "https://symphonic-ai-git-gh-pages-scythe6s-projects.vercel.app/",
     github: "https://github.com/SCYTHE6/Symphonic-AI",
   },
   {
