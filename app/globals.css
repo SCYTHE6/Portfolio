@@ -5,6 +5,14 @@
 @layer base {
     body {
         @apply font-primary bg-primary text-white leading-loose;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Prevent horizontal scroll */
+        min-height: 100vh;  /* Ensure the body spans the full viewport height */
+    }
+    html {
+        height: 100%; /* Ensure the root element spans the full height */
+        overflow-x: hidden; /* Prevent any overflow issues */
     }
     .h1 {
         @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
