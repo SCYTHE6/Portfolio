@@ -56,7 +56,7 @@ const experience = {
     {
       company: "Xorblin Digital Pvt. Ltd.",
       position: "Front-end Developer",
-      duration: "Aug 2024 - Present"
+      duration: "Aug 2024 - Dec 2024"
     },
     {
       company: "Teachnook",
