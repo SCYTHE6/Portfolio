@@ -11,47 +11,11 @@ import {
 
  import { SiTailwindcss, SiNextdotjs } from 'react-icons/si';
 
-//  about data
-const about = {
-  title: "About me",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit Reprehenderit delectus aliquam, repudiandae reiciendis quidem.",
-  info: [
-    {
-      fieldName: "Name",
-      fieldValue: "Divyanshu Chauhan"
-    },
-    {
-      fieldName: "Phone",
-      fieldValue: "(+91) 7906625540"
-    },
-    {
-      fieldName: "Experience",
-      fieldValue: "4+ Years"
-    },
-    {
-      fieldName: "Nationality",
-      fieldValue: "Indian"
-    },
-    {
-      fieldName: "Freelance",
-      fieldValue: "Available"
-    },
-    {
-      fieldName: "Email",
-      fieldValue: "divyanshuchauhan0666@gmail.com"
-    },
-    {
-      fieldName: "Languages",
-      fieldValue: "Hindi, English"
-    },
-  ]
-}
-
 // experience data
 const experience = {
   icon: '/assets/resume/badge.svg',
   title: 'My Experience',
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit Reprehenderit delectus aliquam, repudiandae reiciendis quidem.",
+  description: "I have had the opportunity to work with leading companies, contributing to a variety of projects in front-end development. My expertise includes creating intuitive and responsive user interfaces, enhancing user experience, and delivering high-quality solutions to meet client needs.",
   items: [
     {
       company: "Xorblin Digital Pvt. Ltd.",
@@ -70,13 +34,22 @@ const experience = {
 const education = {
   icon: '/assets/resume/cap.svg',
   title: 'My Education',
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit Reprehenderit delectus aliquam, repudiandae reiciendis quidem.",
+  description: "I am currently pursuing a B.Tech in Computer Science with a specialization in Artificial Intelligence and Machine Learning, building a strong foundation in software development, data structures, and advanced machine learning algorithms.",
   items: [
     {
-      institute: "Vellore Institute of Technology",
+      institute: "VIT, Bhopal",
       degree: "B.Tech in Computer Science(specialization in AI&ML)",
-      duration: "Jan 2024 - April 2024"
+      duration: "Jul 2024 - Present"
     },
+  ],
+};
+
+// certification data
+const certification = {
+  icon: '/assets/resume/cap.svg',
+  title: 'My Certificates',
+  description: "I have completed several specialized courses to enhance my skills in various fields, including web development, Python programming, AI & ML, and Java development on cloud platforms, all of which contribute to my growth as a well-rounded developer.",
+  items: [
     {
       institute: "NPTEL",
       degree: "Privacy and Security in Online Social Media",
@@ -99,7 +72,7 @@ const education = {
     },
     {
       institute: "Johns Hopkins University",
-      degree: "HTML, CSS, and Javascript for Web Developers",
+      degree: "HTML, CSS and Javascript for Web Developers",
       duration: "Oct 2022 - Dec 2022"
     },
     {
@@ -118,7 +91,7 @@ const education = {
 // skills data
 const skills = {
   title: "My Skills",
-  description: "Lorem ipsum dolor sit amet consectetur adipisicing elit Reprehenderit delectus aliquam, repudiandae reiciendis quidem.",
+  description: "I possess a solid grasp of front-end and back-end technologies, including HTML5, CSS3, JavaScript, and frameworks like React.js and Next.js. I am also proficient in using design tools like Figma and have experience working with Tailwind CSS to build responsive, aesthetically pleasing websites.",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -155,6 +128,42 @@ const skills = {
   ],
 };
 
+//  about data
+const about = {
+  title: "About me",
+  description: "I am an experienced and versatile machine learning engineer, passionate about creating innovative and efficient solutions. With over 2+ years of experience in the tech industry, I specialize in front-end development, focusing on creating seamless and engaging user experiences. I am always eager to take on new challenges and collaborate with teams to bring ideas to life.",
+  info: [
+    {
+      fieldName: "Name",
+      fieldValue: "Divyanshu Chauhan"
+    },
+    {
+      fieldName: "Phone",
+      fieldValue: "(+91) 7906625540"
+    },
+    {
+      fieldName: "Experience",
+      fieldValue: "2+ Years"
+    },
+    {
+      fieldName: "Nationality",
+      fieldValue: "Indian"
+    },
+    {
+      fieldName: "Freelance",
+      fieldValue: "Available"
+    },
+    {
+      fieldName: "Email",
+      fieldValue: "divyanshuchauhan0666@gmail.com"
+    },
+    {
+      fieldName: "Languages",
+      fieldValue: "Hindi, English"
+    },
+  ]
+}
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
 import { 
@@ -186,6 +195,7 @@ const Resume = () => {
         <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
           <TabsTrigger value="experience">Experience</TabsTrigger>
           <TabsTrigger value="education">Education</TabsTrigger>
+          <TabsTrigger value="certification">Certification</TabsTrigger>
           <TabsTrigger value="skills">Skills</TabsTrigger>
           <TabsTrigger value="about">About me</TabsTrigger>
         </TabsList>
@@ -239,6 +249,40 @@ const Resume = () => {
                         <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
                           {item.degree}
                           </h3>
+                        <div className="flex items-center gap-3">
+                          {/* {dot} */}
+                          <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                          <p className="text-white/60">{item.institution}</p>
+                        </div>
+                      </li>
+                    );
+                    })}
+                  </ul>
+                </ScrollArea>
+            </div>
+          </TabsContent>
+
+          {/* certification */}
+          <TabsContent value="certification" className="w-full">
+          <div className="flex flex-col gap-[30px] text-center xl:text-left">
+              <h3 className="text-4xl font-bold">{certification.title}</h3>
+              <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                {certification.description}
+                </p>
+                <ScrollArea className="h-[400px]">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                    {certification.items.map((item, index) => {
+                      return (
+                      <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                      >
+                        <span className="text-accent">{item.institute}</span>
+                        
+                        <h3 className="text-xl max-w-[280px] min-h-[80px] text-center lg:text-left">
+                          {item.degree}
+                          </h3>
+                
+                          <span className="text-accent">{item.duration}</span>
+                        
                         <div className="flex items-center gap-3">
                           {/* {dot} */}
                           <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
