@@ -30,7 +30,7 @@ const info = [
   {
     icon: <FaMapMarkerAlt />,
     title: "Address",
-    description: "Near Stadium, Kashipur, 244713",
+    description: "Near Stadium, Kashipur, Uttarakhand",
   },
 ];
 
