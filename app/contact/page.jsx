@@ -30,7 +30,7 @@ const info = [
   {
     icon: <FaMapMarkerAlt />,
     title: "Address",
-    description: "Gayatri Sadan, Chamunda Vihar Phase 1, Stadium, Kashipur, 244713",
+    description: "Near Stadium, Kashipur, 244713",
   },
 ];
 
