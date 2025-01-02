@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react"; // Ensure useState is imported from React
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -14,7 +14,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import { motion } from "framer-motion"; // Ensure this import is correct
+import { motion } from "framer-motion";
 
 const info = [
   {
@@ -35,7 +35,8 @@ const info = [
 ];
 
 const Contact = () => {
-  const [result, setResult] = useState(""); // Define state for result
+  const [result, setResult] = useState("");
+  const [selectedService, setSelectedService] = useState("");
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -43,6 +44,7 @@ const Contact = () => {
     const formData = new FormData(event.target);
 
     formData.append("access_key", "5a1bda9f-95b6-4da1-b2fe-e5e39b27ae51");
+    formData.append("service", selectedService); // Append selected service
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -107,26 +109,38 @@ const Contact = () => {
                     placeholder="Email Address"
                     name="email"
                     required
+                    pattern="[a-zA-Z0-9.]+@gmail\.com" 
+                    title="Please enter a valid Gmail address" 
                   />
                   <Input
                     type="tel"
                     placeholder="Phone number"
                     name="number"
                     required
+                    minLength="10"
+                    maxLength="12" 
+                    pattern="\d{10,12}" 
+                    title="Please enter a valid phone number" 
                   />
                 </div>
                 {/* select */}
                 <div className="flex flex-col gap-6 mt-6">
-                  <Select required>
+                  <Select
+                    name="service"
+                    onValueChange={(value) => setSelectedService(value)} 
+                    required
+                  >
                     <SelectTrigger className="w-full pt-2 pb-2 h-auto leading-normal">
-                      <SelectValue placeholder="Select a service"  />
+                      <SelectValue placeholder="Select a service" />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectGroup>
                         <SelectLabel>Select a service</SelectLabel>
-                        <SelectItem value="est">Web Development</SelectItem>
-                        <SelectItem value="cst">Software Development</SelectItem>
-                        <SelectItem value="mst">Machine Learning Engineer</SelectItem>
+                        <SelectItem value="Web Development">Web Development</SelectItem>
+                        <SelectItem value="Software Development">Software Development</SelectItem>
+                        <SelectItem value="Software Tester">Software Tester</SelectItem>
+                        <SelectItem value="Prompt Engineer">Prompt Engineer</SelectItem>
+                        <SelectItem value="Machine Learning Engineer">Machine Learning Engineer</SelectItem>
                       </SelectGroup>
                     </SelectContent>
                   </Select>
