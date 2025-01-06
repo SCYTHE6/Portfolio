@@ -29,7 +29,7 @@ const Home = () => {
           <div className="text-xl">
             <Typewriter
             words={['Frontend Developer', 'Prompt Engineer', 'Machine Learning Engineer']}
-            loop={5}
+            loop={0}
             cursor
             cursorStyle='_'
             typeSpeed={100}
