@@ -28,7 +28,7 @@ const Home = () => {
           <div className="text-center xl:text-left order-2 xl:order-none">
           <div className="text-xl">
             <Typewriter
-            words={['Frontend Developer', 'Software Developer', 'Machine Learning Engineer']}
+            words={['Frontend Developer', 'Prompt Engineer', 'Machine Learning Engineer']}
             loop={5}
             cursor
             cursorStyle='_'

@@ -12,8 +12,8 @@ const services = [
   },
   {
     num: '02',
-    title: 'Software Developer',
-    description: "Building robust, scalable, and efficient software solutions tailored to your needs",
+    title: 'Prompt Engineer',
+    description: "Mastering the art of crafting precise and impactful prompts to unlock the full potential of AI systems, ensuring accurate, context-aware, and innovative solutions for diverse applications.",
     href: ""
   },
   {
