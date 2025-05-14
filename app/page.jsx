@@ -54,13 +54,13 @@ const Home = () => {
             </p>
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-            <a href="/assets/resume/Divyanshu Chauhan_Resume.pdf" download="Divyanshu-Chauhan-CV.pdf">
+            <a href="/assets/resume/Divyanshu Chauhan_Resume.pdf" download="Divyanshu Chauhan_Resume.pdf">
               <Button 
               variant="outline" 
               size="lg" 
               className="uppercase flex items-center gap-2"
               >
-                <span>Download CV</span>
+                <span>Download Resume</span>
                 <FiDownload className="text-xl" />
               </Button>
               </a>
